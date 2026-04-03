@@ -31,8 +31,8 @@ export const projects = [
     accent: "#18181B",
     size: "large",
     year: "2024",
-    live: "https://wellspring-hub.vercel.app/",
-    github: "https://github.com/mercie-ux/wellspring-hub",
+    live: "https://growth-full-circle-360.vercel.app/",
+    github: "https://github.com/mercie-ux/GrowthFullCircle.git",
   },
   {
     id: 2,
