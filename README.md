@@ -4,7 +4,7 @@ A modern, creative developer portfolio built with React, Vite, and Framer Motion
 
 ## Live Site
 
-> Deploy URL goes here
+[mercy mbao](https://mercymbao.netlify.app/)
 
 ## Tech Stack
 
@@ -28,7 +28,7 @@ A modern, creative developer portfolio built with React, Vite, and Framer Motion
 
 ## Projects Featured
 
-- **Wellspring Hub** — Mental wellness platform (Next.js, Python, SQLite3)
+- **GrowthFullCirle** — Mental wellness platform (Next.js, Python, SQLite3)
 - **Mkulima** — Farmer crop tracking app (React, PostgreSQL, Node.js)
 - **Farm Produce** — Agricultural e-commerce (Next.js, MongoDB)
 - **Momversation AI** — GPT-powered wellness chat for mothers (TypeScript, OpenAI)
