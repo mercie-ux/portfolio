@@ -70,14 +70,31 @@ function InputField({ label, type = "text", name, placeholder, multiline = false
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
+    setError(null);
+
+    try {
+      const res = await fetch(import.meta.env.VITE_FORMSPREE_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(Object.fromEntries(new FormData(e.target))),
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+        e.target.reset();
+      } else {
+        setError("Something went wrong. Please try again or email me directly.");
+      }
+    } catch {
+      setError("Network error. Please check your connection and try again.");
+    } finally {
       setLoading(false);
-      setSubmitted(true);
-    }, 1200);
+    }
   };
 
   return (
@@ -455,6 +472,21 @@ export default function Contact() {
                     </div>
                     <InputField label="Subject" name="subject" placeholder="What's this about?" />
                     <InputField label="Message" name="message" placeholder="Tell me about your project..." multiline />
+
+                    {error && (
+                      <p
+                        style={{
+                          fontFamily: "var(--font-body)",
+                          fontSize: 13,
+                          color: "var(--color-destructive)",
+                          border: "2px solid var(--color-destructive)",
+                          padding: "10px 14px",
+                          background: "rgba(220,38,38,0.05)",
+                        }}
+                      >
+                        {error}
+                      </p>
+                    )}
 
                     <motion.button
                       type="submit"
