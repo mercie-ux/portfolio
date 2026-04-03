@@ -1,16 +1,82 @@
-# React + Vite
+# Mercy Mbao — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, creative developer portfolio built with React, Vite, and Framer Motion. Features a Neo Brutalism design system, GSAP scroll-driven stack card animations, and a custom cursor.
 
-Currently, two official plugins are available:
+## Live Site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+> Deploy URL goes here
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Layer | Technology |
+|---|---|
+| Framework | React 19 + Vite |
+| Animations | Framer Motion + GSAP (ScrollTrigger) |
+| Icons | Lucide React |
+| Fonts | Archivo + Space Grotesk (Google Fonts) |
+| Styling | Inline CSS with CSS custom properties |
+| Design System | Neo Brutalism — thick borders, hard offset shadows, spring interactions |
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Custom cursor** — pink dot + trailing ring with hover scale, hidden on touch devices
+- **Animated hero** — staggered text reveal, scrolling ticker, parallax
+- **GSAP stack cards** — sticky cards that scale down and stack as you scroll through projects
+- **Animated skill bars** — scroll-triggered progress bars with percentage labels
+- **Contact form** — with success state animation
+- **Fully responsive** — 375px → 768px → 1024px → 1440px
+
+## Projects Featured
+
+- **Wellspring Hub** — Mental wellness platform (Next.js, Python, SQLite3)
+- **Mkulima** — Farmer crop tracking app (React, PostgreSQL, Node.js)
+- **Farm Produce** — Agricultural e-commerce (Next.js, MongoDB)
+- **Momversation AI** — GPT-powered wellness chat for mothers (TypeScript, OpenAI)
+- **Telegram AI Bot** — Gemini-powered personal assistant bot (Python, Flask)
+
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── Cursor.jsx       # Custom cursor (desktop only)
+│   ├── Navbar.jsx       # Fixed navbar with scroll state
+│   ├── Hero.jsx         # Landing section with ticker + CTA
+│   ├── Projects.jsx     # Projects section wrapper
+│   ├── StackCards.jsx   # GSAP sticky stack card animation
+│   ├── About.jsx        # Skills, stats, bio
+│   ├── Contact.jsx      # Contact form + social links
+│   └── Footer.jsx       # Footer with back-to-top
+├── data/
+│   └── portfolio.js     # All personal info, projects, skills, socials
+└── index.css            # CSS custom properties + global reset
+```
+
+## Customisation
+
+All personal content lives in [`src/data/portfolio.js`](src/data/portfolio.js) — update name, bio, email, phone, projects, skills, and social links there.
+
+To add your CV, place the file in the `public/` folder and update the download link in `Hero.jsx`.
+
+## Contact
+
+- **Email:** njerimercy77@gmail.com
+- **GitHub:** [mercie-ux](https://github.com/mercie-ux)
+- **LinkedIn:** [Mercy Njeri](https://www.linkedin.com/in/mercy-njeri-979201162/)
+- **Twitter/X:** [@junearsenic7](https://x.com/junearsenic7)

@@ -2,7 +2,7 @@ export const personal = {
   name: "Mercy Mbao",
   role: "Software Developer",
   tagline: "Crafting exceptional digital experiences with modern technologies.",
-  bio: "Frontend Developer specializing in React, Next.js, and the MERN stack. Passionate about clean code, innovative solutions, and pushing the boundaries of web development. I turn complex problems into elegant, user-friendly interfaces.",
+  bio: "Software Developer specializing in React, React Native, Next.js, and the MERN stack. Passionate about clean code, innovative solutions, and pushing the boundaries of web development. I turn complex problems into elegant, user-friendly interfaces.",
   location: "Nairobi, Kenya",
   email: "njerimercy77@gmail.com",
   phone: "+254703289388",
@@ -23,7 +23,7 @@ export const skills = [
 export const projects = [
   {
     id: 1,
-    title: "Wellspring Hub",
+    title: "Growth Full Circle",
     category: "Web App",
     description: "A digital platform promoting mental wellness in the workplace. Built for GrowthFullCircle Agency with a focus on employee wellbeing and accessible mental health resources.",
     tags: ["Next.js", "TailwindCSS", "Python", "SQLite3"],
