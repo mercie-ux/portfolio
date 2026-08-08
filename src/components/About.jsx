@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion"; // eslint-disable-line no-unused-vars
-import { personal, skills } from "../data/portfolio";
+import { personal, skills, openSource } from "../data/portfolio";
 
 function SkillBar({ skill, index }) {
   const ref = useRef(null);
@@ -82,7 +82,7 @@ const stats = [
   { number: "2+", label: "Years Experience" },
   { number: "40+", label: "Projects Shipped" },
   { number: "12+", label: "Happy Clients" },
-  { number: "3", label: "Open Source Libs" },
+  { number: "7", label: "Open Source Libs" },
 ];
 
 export default function About() {
@@ -242,24 +242,82 @@ export default function About() {
               ))}
             </div>
 
-            {/* Open source note */}
-            <motion.p
+            {/* Open source contributions */}
+            <motion.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.6, duration: 0.5 }}
-              style={{
-                fontFamily: "var(--font-body)",
-                fontSize: 14,
-                lineHeight: 1.7,
-                color: "rgba(255,255,255,0.75)",
-                borderLeft: "3px solid var(--color-accent)",
-                paddingLeft: 16,
-                marginTop: 8,
-              }}
+              style={{ marginTop: 8 }}
             >
-              I have contributed to several open source projects, collaborating with global developer communities and shipping meaningful improvements to production codebases.
-            </motion.p>
+              <p
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: 14,
+                  lineHeight: 1.7,
+                  color: "rgba(255,255,255,0.75)",
+                  borderLeft: "3px solid var(--color-accent)",
+                  paddingLeft: 16,
+                  marginBottom: 20,
+                }}
+              >
+                I have contributed to several Bitcoin and open source projects, reviewing pull requests and shipping code alongside global developer communities.
+              </p>
+
+              <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+                {openSource.map((item) => (
+                  <div
+                    key={item.project}
+                    style={{
+                      paddingLeft: 16,
+                      borderLeft: "3px solid rgba(255,255,255,0.15)",
+                    }}
+                  >
+                    <div
+                      style={{
+                        fontFamily: "var(--font-heading)",
+                        fontWeight: 800,
+                        fontSize: 15,
+                        color: "var(--color-white)",
+                      }}
+                    >
+                      {item.project}
+                    </div>
+                    <div
+                      style={{
+                        fontFamily: "var(--font-body)",
+                        fontSize: 13,
+                        color: "rgba(255,255,255,0.55)",
+                        marginBottom: 6,
+                      }}
+                    >
+                      {item.role}
+                    </div>
+                    <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                      {item.links.map((link) => (
+                        <a
+                          key={link.url}
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            fontFamily: "var(--font-body)",
+                            fontWeight: 700,
+                            fontSize: 12,
+                            color: "var(--color-accent)",
+                            textDecoration: "none",
+                            border: "1px solid var(--color-accent)",
+                            padding: "3px 8px",
+                          }}
+                        >
+                          {link.label}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
 
             {/* Philosophy card */}
             <motion.div

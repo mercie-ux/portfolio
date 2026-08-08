@@ -287,8 +287,8 @@ export default function Hero() {
           </motion.a>
 
           <motion.a
-            href="/mercy-cv(2025).pdf"
-            download
+            href="/Mercy-Njeri-Mbao-CV.pdf"
+            download="Mercy-Njeri-Mbao-CV.pdf"
             style={{
               fontFamily: "var(--font-heading)",
               fontWeight: 800,
