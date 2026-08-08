@@ -28,10 +28,10 @@ A modern, creative developer portfolio built with React, Vite, and Framer Motion
 
 ## Projects Featured
 
-- **GrowthFullCirle** — Mental wellness platform (Next.js, Python, SQLite3)
-- **Mkulima** — Farmer crop tracking app (React, PostgreSQL, Node.js)
+- **Growth Full Circle** — Mental wellness platform (Next.js, Python, SQLite3)
+- **SatsFlo** — Menstrual cycle & health tracking mobile app (React Native, Expo, Node.js)
 - **Farm Produce** — Agricultural e-commerce (Next.js, MongoDB)
-- **Momversation AI** — GPT-powered wellness chat for mothers (TypeScript, OpenAI)
+- **Chama Vault** — Bitcoin Lightning-powered savings group platform (Next.js, LNbits API, Java)
 - **Telegram AI Bot** — Gemini-powered personal assistant bot (Python, Flask)
 
 ## Getting Started
