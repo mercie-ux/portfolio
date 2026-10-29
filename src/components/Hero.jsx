@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 import { motion, useScroll } from "framer-motion";
-import { ArrowDown, Zap, Download } from "lucide-react";
+import { ArrowDown, Zap, ExternalLink } from "lucide-react";
 import { personal } from "../data/portfolio";
 
 const containerVariants = {
@@ -288,7 +288,8 @@ export default function Hero() {
 
           <motion.a
             href="/Mercy-Njeri-Mbao-CV.pdf"
-            download="Mercy-Njeri-Mbao-CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               fontFamily: "var(--font-heading)",
               fontWeight: 800,
@@ -308,8 +309,8 @@ export default function Hero() {
             whileTap={{ x: 0, y: 0, boxShadow: "none" }}
             transition={{ type: "spring", stiffness: 400, damping: 20 }}
           >
-            <Download size={16} />
-            Download CV
+            <ExternalLink size={16} />
+            View CV
           </motion.a>
 
           <span
